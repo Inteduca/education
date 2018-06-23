@@ -1,0 +1,33 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href = "{% static 'identificacion/register.css' %}" />
+
+<div id="bienvenido">
+    Bienvenido
+</div>
+
+<form method="post">
+    {% csrf_token %}
+    <div id="registrar">
+    <p>
+    Name:  <label for="name"></label>
+    <input id="name" type="text" name="name"> <br>
+    Password:  <label for="password"></label>
+    <input id="password" type="password" name="password"> <br>
+    Email:  <label for="email"></label>
+    <input id="email" type="text" name="email"> <br>
+    <button type="submit">OK</button>
+    </p>
+    </div>
+</form>
+
+<form method="post">
+    {% csrf_token %}
+    <div id="login">
+        ¿Ya estás registrado? <br>
+        Name:  <label for="name1"></label>
+        <input id="name1" type="text" name="name1"> <br>
+        Password:  <label for="password1"></label>
+        <input id="password1" type="password" name="password1"> <br>
+        <button type="submit">OK</button>
+    </div>
+</form>

@@ -1,0 +1,35 @@
+body{
+    background : white url("images/fondo2.jpg");
+    background-size:100%;
+}
+
+#bienvenido {
+    position: absolute;
+    left: 35%;
+    top: 12%;
+    width: 30%;
+    height: 5%;
+    border: 2px solid black;
+    text-align: center;
+}
+
+#registrar {
+    width: 25%;
+    height: 30%;
+    overflow: auto;
+    margin: auto;
+    border: 2px solid black;
+    position: absolute;
+    left: 15%; top: 25%;
+    text-align: justify;
+    }
+
+#login{
+    width: 25%;
+    height: 30%;
+    position: absolute;
+    left: 60%; top: 25%;
+    margin:auto;
+    border: 2px solid black;
+    text-align: justify;
+}

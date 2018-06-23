@@ -1,0 +1,65 @@
+from django.shortcuts import redirect, render, get_object_or_404
+from django.http import HttpResponse, HttpResponseRedirect, Http404
+from django.forms import modelformset_factory
+from django import forms
+from .models import DataSheet
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, login
+from .forms import DataSheetForm
+
+def register(request):
+    if request.method=='POST':
+        user1 = request.POST.get("name1")
+        password1 = request.POST.get("password1")
+        if user1 is None:
+            username=request.POST.get('name')
+            password=request.POST.get('password')
+            email=request.POST.get('email')
+            user=User.objects.create_user(username=username, password=password, email=email)
+            #es necesario meter asi los users en la db si quieres que luego funcionen con los auth etc
+            try:
+                user.save()
+            except:
+                Http404("error al save el user")
+            try:
+                user = authenticate(request, username=username, password= password)
+                if user is not None:
+                    login(request, user)
+                else:
+                    Http404("ha fallado el login")
+            except:
+                Http404("ha fallado el loop try del authenitcate")
+            try:
+                d=DataSheet.objects.get(username=username)
+            except:
+                return HttpResponseRedirect('/identificacion/fill')
+            else:
+                Http404("estas ya metido y rellenado")
+        else:
+            user = authenticate(request, username=user1, password= password1)
+            if user is not None:
+                login(request, user)
+                try:
+                    d = DataSheet.objects.get(username=user1)
+                except:
+                    return HttpResponseRedirect('/identificacion/fill')
+                else:
+                    return HttpResponseRedirect('/principal/principal')
+            else:
+                raise Http404("no auth")
+
+    return render(request, 'register.html')
+
+def fill(request):
+    form = DataSheetForm()
+    if request.method == "POST":
+        if request.user.is_authenticated:
+            datasheet = DataSheet(username=request.user.username)
+            form = DataSheetForm(request.POST, instance=datasheet)
+            if form.is_valid:
+                form.save()
+            else:
+                raise Http404("no valida form")
+        else:
+            raise Http404("no authenticated")
+    return render(request, 'fill.html', {'form': form})
