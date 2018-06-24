@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3bee2f59-db10-4c07-a518-97e7f6e5e427" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/education/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/education/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -141,11 +141,6 @@
               <item name="education" type="462c0819:PsiDirectoryNode" />
               <item name="education" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="education" type="b2602c69:ProjectViewProjectNode" />
-              <item name="education" type="462c0819:PsiDirectoryNode" />
-              <item name="identificacion" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -183,8 +178,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="676" y="0" width="697" height="735" extended-state="0" />
-    <editor active="true" />
+    <frame x="676" y="0" width="697" height="735" extended-state="1" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2716593" />
       <window_info anchor="bottom" id="TODO" order="6" />
