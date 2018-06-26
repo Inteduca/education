@@ -8,10 +8,10 @@ from django.contrib.auth import authenticate, login
 from .forms import DataSheetForm
 
 def register(request):
+    #diferenciar los botones y decir si e presiona uno hace x
+    #si se presiona otro hace y
     if request.method=='POST':
-        user1 = request.POST.get("name1")
-        password1 = request.POST.get("password1")
-        if user1 is None:
+        if request.POST.get("register"):
             username=request.POST.get('name')
             password=request.POST.get('password')
             email=request.POST.get('email')
@@ -35,7 +35,9 @@ def register(request):
                 return HttpResponseRedirect('/identificacion/fill')
             else:
                 Http404("estas ya metido y rellenado")
-        else:
+        if request.POST.get("login"):
+            user1 = request.POST.get("name1")
+            password1 = request.POST.get("password1")
             user = authenticate(request, username=user1, password= password1)
             if user is not None:
                 login(request, user)
@@ -44,7 +46,7 @@ def register(request):
                 except:
                     return HttpResponseRedirect('/identificacion/fill')
                 else:
-                    return HttpResponseRedirect('/principal/principal')
+                    return HttpResponseRedirect('')
             else:
                 raise Http404("no auth")
 
