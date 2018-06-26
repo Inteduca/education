@@ -84,6 +84,7 @@ conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
+        'NAME' : 'DATABASE',
     }
 }
 
