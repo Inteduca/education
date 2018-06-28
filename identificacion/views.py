@@ -2,10 +2,9 @@ from django.shortcuts import redirect, render, get_object_or_404
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.forms import modelformset_factory
 from django import forms
-from .models import DataSheet
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
-from .forms import DataSheetForm
+
 
 def register(request):
     #diferenciar los botones y decir si e presiona uno hace x
@@ -44,7 +43,7 @@ def register(request):
                 try:
                     d = DataSheet.objects.get(username=user1)
                 except:
-                    return HttpResponseRedirect('/identificacion/fill')
+                    return HttpResponseRedirect('/usuario/')
                 else:
                     return HttpResponseRedirect('')
             else:
@@ -52,16 +51,3 @@ def register(request):
 
     return render(request, 'register.html')
 
-def fill(request):
-    form = DataSheetForm()
-    if request.method == "POST":
-        if request.user.is_authenticated:
-            datasheet = DataSheet(username=request.user.username)
-            form = DataSheetForm(request.POST, instance=datasheet)
-            if form.is_valid:
-                form.save()
-            else:
-                raise Http404("no valida form")
-        else:
-            raise Http404("no authenticated")
-    return render(request, 'fill.html', {'form': form})

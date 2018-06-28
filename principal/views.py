@@ -5,22 +5,6 @@ from django.http import HttpResponse, HttpResponseRedirect, Http404
 # continuamente en la pantalla a pesar de estar en otras apps
 
 
-def principal(request):
+def hola(request):
 
-    return render(request, 'principal.html')
-
-def who (request):
-
-    return render(request, 'who.html')
-
-def ayuda (request):
-
-    return render(request, 'ayuda.html')
-
-def ajustes (request):
-
-    return render(request, 'ajustes.html')
-
-def contacta (request):
-
-    return render(request, 'contacta.html')
+    return render(request, 'hola.html')

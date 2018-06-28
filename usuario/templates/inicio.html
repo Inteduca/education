@@ -1,0 +1,26 @@
+{% extends "education/base.html" %}
+{% block barraup %}
+{{block.super}}
+{%endblock%}
+
+{%block content%}
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href = "{% static 'usuario/inicio.css' %}" />
+    <div id="nombre_usuario">
+        <p> Hola, {{ username }}:</p>
+    </div>
+    <div class="tarea" id="scores">
+        <h1>Seguimiento:</h1>
+        <p>{{ score_text }}</p>
+    </div>
+    <div class="tarea" id="horario">
+        <h1>Horario:</h1>
+        <p>{{ horario_text }}</p>
+    </div>
+    <div id="recuerda">
+        Recuerda que siempre estaremos atentos al correo y al móvil: ¡Contacta si tienes alguna duda! inted00@gmail.com<br>
+        No dudes en dejar un mensaje a la plataforma que prefieras con las dudas que tengas en el camino, nosotros la resolveremos.
+    </div>
+
+{%endblock%}

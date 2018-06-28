@@ -1,0 +1,21 @@
+{% extends "education/base.html" %}
+{% block barraup %}
+{{block.super}}
+{%endblock%}
+
+{%block content%}
+{% load static %}
+<link rel="stylesheet" type="text/css" href = "{% static 'principal/hola.css' %}" />
+<div id="presentacion">
+    <h style="font-size: 30">¿Qué es IntEd?</h>
+    <p>Inted es una propuesta con los objetivos de promover la igualdad de
+    oportunidades y mejorar la enseñanza mediante el desarrollo de una inteligencia
+    artificial que sirve como profesor particular. Esta inteligencia será capaz de adaptarse
+    a las dificultades y gustos de cada alumno, elaborando métodos de aprendizaje personalizados,
+    alcanzando una enseñanza de apoyo barata y de calidad. A lo largo del desarrollo del proyecto, la inteligencia artificial
+    utilizada se hará más competente. Si tiene alguna duda, sugerencia o una explicación más detallada del proyecto, por favor contacte con
+    nosotros a la dirección de correo inted00@gmail.com y le responderemos rápidamente.</p>
+
+    <p><a href="/identificacion" style="color: black">Identificación</a></p>
+</div>
+{%endblock%}
