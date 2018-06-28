@@ -16,12 +16,16 @@ def inicio(request):
             try:
                 score_text=Comentarios.objects.values_list('score_text', flat=True).get(username=username)
                 horario_text=Comentarios.objects.values_list('horario_text', flat=True).get(username=username)
+                if score_text == ' ':
+                    score_text="Vaya, todavía no tienes un seguimiento. Contacta con nosotros por correo o móvil y trabajaremos en él."
+                if horario_text == ' ':
+                    horario_text="Vaya, todavía no tienes un horario. Contacta con nosotros por correo o móvil y trabajaremos en él."
             except:
-                score_text="error, mande un mail o un mensaje"
-                horario_text="error, mande un mail o un mensaje"
+                score_text="Vaya, parece que ha habido un error. Por favor, háznoslo saber contactando con nosotros por correo o móvil."
+                horario_text="Vaya, parece que ha habido un error. Por favor, háznoslo saber contactando con nosotros por correo o móvil."
 
         else:
-            Http404("usuario no identificado")
+            Http404("Ha ocurrido un error en la identificación del usuario.")
 
     context={'score_text':score_text, 'horario_text':horario_text,'username':username}
     return render(request, 'inicio.html', context)

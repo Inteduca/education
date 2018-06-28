@@ -1,1 +1,2 @@
 web: python manage.py runserver 
+log: tail -f log/development.log
