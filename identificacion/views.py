@@ -24,28 +24,19 @@ def register(request):
                 user = authenticate(request, username=username, password= password)
                 if user is not None:
                     login(request, user)
+                    return HttpResponseRedirect('/usuario/')
                 else:
                     Http404("ha fallado el login")
             except:
-                Http404("ha fallado el loop try del authenitcate")
-            try:
-                d=DataSheet.objects.get(username=username)
-            except:
-                return HttpResponseRedirect('/identificacion/fill')
-            else:
-                Http404("estas ya metido y rellenado")
+                Http404("user not authenticated")
+
         if request.POST.get("login"):
             user1 = request.POST.get("name1")
             password1 = request.POST.get("password1")
             user = authenticate(request, username=user1, password= password1)
             if user is not None:
                 login(request, user)
-                try:
-                    d = DataSheet.objects.get(username=user1)
-                except:
-                    return HttpResponseRedirect('/usuario/')
-                else:
-                    return HttpResponseRedirect('')
+                return HttpResponseRedirect('/usuario/')
             else:
                 raise Http404("no auth")
 

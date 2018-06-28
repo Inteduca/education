@@ -4,7 +4,7 @@ body{
 }
 h1{
     font-size: 18;
-    color: solid blue;
+    color: solid black;
 }
 .tarea{
     position:absolute;
@@ -22,12 +22,14 @@ h1{
 #horario{
     text-align: justify;
     font-size: 13;
-    left: 93%; top: 25%;
+    left: 53%; top: 25%;
 }
 
 #nombre_usuario{
     font-size: 20;
     color: orange;
+    position: absolute;
+    top: 18%; left: 18%;
 }
 #recuerda{
     position:absolute;

@@ -3,6 +3,7 @@ from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.forms import modelformset_factory
 from django import forms
 from django.contrib.auth.models import User
+from usuario.models import Comentarios
 from django.contrib.auth import authenticate, login
 
 def inicio(request):
@@ -13,13 +14,14 @@ def inicio(request):
         if request.user.is_authenticated:
             username=request.user.username
             try:
-                score_text=Comentarios.objects.get(username=username)
-                horario_text=Comentarios.objects.get(username=username)
+                score_text=Comentarios.objects.values_list('score_text', flat=True).get(username=username)
+                horario_text=Comentarios.objects.values_list('horario_text', flat=True).get(username=username)
             except:
                 score_text="error, mande un mail o un mensaje"
                 horario_text="error, mande un mail o un mensaje"
 
         else:
             Http404("usuario no identificado")
+
     context={'score_text':score_text, 'horario_text':horario_text,'username':username}
-    render(request, 'usuario.html', context)
+    return render(request, 'inicio.html', context)
