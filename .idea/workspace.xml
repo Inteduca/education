@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bee2f59-db10-4c07-a518-97e7f6e5e427" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/education/static/education/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/education/static/education/base.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/education/templates/education/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/education/templates/education/base.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,10 +28,9 @@
       <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/education/templates/education/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="81" selection-start-line="9" selection-start-column="81" selection-end-line="9" selection-end-column="81" />
+            <state relative-caret-position="238">
+              <caret line="14" column="12" lean-forward="true" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
               <folding>
-                <element signature="n#style#0;n#p#0;n#div#0;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#p#0;n#div#0;n#body#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -515,10 +513,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/education/templates/education/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="81" selection-start-line="9" selection-start-column="81" selection-end-line="9" selection-end-column="81" />
+        <state relative-caret-position="238">
+          <caret line="14" column="12" lean-forward="true" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
           <folding>
-            <element signature="n#style#0;n#p#0;n#div#0;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#p#0;n#div#0;n#body#0;n#!!top" expanded="true" />
           </folding>
         </state>
