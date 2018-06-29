@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bee2f59-db10-4c07-a518-97e7f6e5e427" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/education/static/education/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/education/static/education/base.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/education/templates/education/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/education/templates/education/base.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,8 +29,9 @@
         <entry file="file://$PROJECT_DIR$/education/templates/education/base.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="9" column="75" selection-start-line="9" selection-start-column="75" selection-end-line="9" selection-end-column="75" />
+              <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
               <folding>
+                <element signature="n#style#0;n#p#0;n#div#0;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#p#0;n#div#0;n#body#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -110,8 +110,8 @@
         <option value="$PROJECT_DIR$/identificacion/views.py" />
         <option value="$PROJECT_DIR$/principal/static/principal/hola.css" />
         <option value="$PROJECT_DIR$/principal/templates/hola.html" />
-        <option value="$PROJECT_DIR$/education/templates/education/base.html" />
         <option value="$PROJECT_DIR$/education/static/education/base.css" />
+        <option value="$PROJECT_DIR$/education/templates/education/base.html" />
       </list>
     </option>
   </component>
@@ -515,8 +515,9 @@
     <entry file="file://$PROJECT_DIR$/education/templates/education/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="75" selection-start-line="9" selection-start-column="75" selection-end-line="9" selection-end-column="75" />
+          <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
           <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#p#0;n#div#0;n#body#0;n#!!top" expanded="true" />
           </folding>
         </state>
