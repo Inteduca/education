@@ -18,24 +18,22 @@ def register(request):
             #es necesario meter asi los users en la db si quieres que luego funcionen con los auth etc
             try: #salvar al user
                 user.save()
-            except IntegrityError:
-                messages.add_message(request, messages.INFO, 'Ese nombre de usuario ya está escogido.')
             except:
-                Http404("Vaya, parece que ha ocurrido un error, y ¡es nuestra culpa! Por favor, háznoslo saber contactando con nosotros por correo o móvil")
+                raise Http404("Vaya, parece que ha ocurrido un error. Prueba con otro nombre de usuario, o contacta con nosotros.")
             try: #hacer un comentarios
                 d=Comentarios(username=username)
                 d.save()
             except:
-                Http404("Vaya, parece que ha ocurrido un error, y ¡es nuestra culpa! Por favor, háznoslo saber contactando con nosotros por correo o móvil")
+                raise Http404("Vaya, parece que ha ocurrido un error, y ¡es nuestra culpa! Por favor, háznoslo saber contactando con nosotros por correo o móvil")
             try:
                 user = authenticate(request, username=username, password= password)
                 if user is not None:
                     login(request, user)
                     return HttpResponseRedirect('/usuario/')
                 else:
-                    Http404("Vaya, parece que ha ocurrido un error, y ¡es nuestra culpa! Por favor, háznoslo saber contactando con nosotros por correo o móvil")
+                    raise Http404("Vaya, parece que ha ocurrido un error, y ¡es nuestra culpa! Por favor, háznoslo saber contactando con nosotros por correo o móvil")
             except:
-                Http404("Vaya, parece que ha ocurrido un error, y ¡es nuestra culpa! Por favor, háznoslo saber contactando con nosotros por correo o móvil")
+                raise Http404("Vaya, parece que ha ocurrido un error, y ¡es nuestra culpa! Por favor, háznoslo saber contactando con nosotros por correo o móvil")
 
         if request.POST.get("login"):
             user1 = request.POST.get("name1")
@@ -45,7 +43,6 @@ def register(request):
                 login(request, user)
                 return HttpResponseRedirect('/usuario/')
             else:
-                messages.add_message(request, messages.INFO, 'Nombre de usuario y contraseña no coinciden. ¿Te has olvidado de la contraseña? Contacta con nosotros por correo o móvil.')
-
+                raise Http404("¡Vaya! Parece que la contraseña es incorrecta. Asegúrate de escribirla bien y, si lo necesitas, contacta con nosotros por correo o móvil")
     return render(request, 'register.html')
 
