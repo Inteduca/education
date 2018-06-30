@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3bee2f59-db10-4c07-a518-97e7f6e5e427" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/education/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/education/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/education/static/education/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/education/static/education/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/education/templates/education/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/education/templates/education/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/identificacion/static/identificacion/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/identificacion/static/identificacion/register.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/identificacion/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/identificacion/templates/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/identificacion/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/identificacion/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuario/templates/inicio.html" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/templates/inicio.html" afterDir="false" />
-    </list>
+    <list default="true" id="3bee2f59-db10-4c07-a518-97e7f6e5e427" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -227,7 +218,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12737921" />
