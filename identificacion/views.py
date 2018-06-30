@@ -7,14 +7,15 @@ from usuario.models import Comentarios
 from django.db import IntegrityError
 
 def register(request):
-    #diferenciar los botones y decir si e presiona uno hace x
-    #si se presiona otro hace y
     if request.method=='POST':
         if request.POST.get("register"):
             username=request.POST.get('name')
             password=request.POST.get('password')
             email=request.POST.get('email')
-            user=User.objects.create_user(username=username, password=password, email=email)
+            try:
+                user=User.objects.create_user(username=username, password=password, email=email)
+            except:
+                raise Http404("Prueba con otro nombre de usuario, parece que ese ya está elegido. Si sigue sin funcionar tras haber probado con otros nombres, contacta con nosotros por correo (inted00@gmail.com).")
             #es necesario meter asi los users en la db si quieres que luego funcionen con los auth etc
             try: #salvar al user
                 user.save()

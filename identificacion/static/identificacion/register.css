@@ -20,7 +20,7 @@ h1{
 
 #registrar {
     width: 25%;
-    height: 30%;
+    height: 35%;
     overflow: auto;
     margin: auto;
     border: 2px solid black;
@@ -33,7 +33,7 @@ h1{
 #login{
     padding:10px;
     width: 25%;
-    height: 30%;
+    height: 35%;
     position: absolute;
     left: 60%; top: 35%;
     margin:auto;

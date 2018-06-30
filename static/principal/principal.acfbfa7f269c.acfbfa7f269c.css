@@ -1,0 +1,10 @@
+#presentacion{
+    height: 40%;
+    min-height: 40%;
+    width: 50%;
+    background-color: #c2d6d6;
+    text_align: justify;
+    position: absolute;
+    top:25%; left: 30%;
+    border: 2px black;
+    }
