@@ -11,13 +11,14 @@
 
 /* id=# (para uno solo), class=. (para más de uno) */
 #inted{
-    font-size: 70;
+    font-size: 50;
     font-weight: bold;
     position: absolute;
     top: 5%; left: 3%}
 
 #tut{
     font-size: 30;
+    font-weight: bold;
     position:absolute;
-    top: 5%; left: 19%
+    top: 5%; left: 70%
 }
