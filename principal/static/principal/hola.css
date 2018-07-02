@@ -2,38 +2,39 @@ body{
     background : white url("images/fondo4.jpg");
     background-size:100%;
 }
-#presentacion{
-    min-height: 30%;
+#presentacion{ /* tengo que hacer algo para que quepa to una vez hecho eso ya empiezo a anunciarlo y a hacer lo de nick. ya he revisado to el texto */
+    min-height: 22%;
     width: 40%;
     background-color: #c2d6d6;
     text-align: justify;
     position: absolute;
-    top:20%; left: 7%;
+    top:18%; left: 7%;
     border: 2px solid black;
     padding: 10px 10px 10px 10px;
     }
 #funciones{
     border: 2px solid black;
-    height: 60%;
-    min-height: 60%;
+    height: 62%;
+    min-height: 62%;
     width: 40%;
     background-color: #c2d6d6;
     text-align: justify;
     position: absolute;
-    top:20%; left: 53%;
+    top:18%; left: 53%;
     padding: 10px 10px 10px 10px;
 }
-
-#quien{
+#precio{
     padding: 10px 10px 10px 10px;
-    min-height: 10%;
+    min-height: 35%;
+    height: 33%;
     width: 40%;
     background-color: #c2d6d6;
     text-align: justify;
     position: absolute;
-    top:55%; left: 7%;
+    top:45%; left: 7%;
     border: 2px solid black;
 }
+
 #ident{
     height: 15%;
     min-height: 15%;
@@ -45,7 +46,7 @@ body{
     border: 2px solid black;
 }
 h1{
-    font-size: 24;
+    font-size: 20;
     font -weight: bold;
     color: solid black;
 }

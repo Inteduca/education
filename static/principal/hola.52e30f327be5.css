@@ -1,9 +1,10 @@
 body{
-    background : white url("images/fondo4.jpg");
+    background : white url("images/fondo4.121b22a6b1c0.jpg");
     background-size:100%;
 }
 #presentacion{ /* tengo que hacer algo para que quepa to una vez hecho eso ya empiezo a anunciarlo y a hacer lo de nick. ya he revisado to el texto */
-    min-height: 22%;
+    min-height: 24%;
+    font-size: 10px;
     width: 40%;
     background-color: #c2d6d6;
     text-align: justify;
@@ -25,13 +26,13 @@ body{
 }
 #precio{
     padding: 10px 10px 10px 10px;
-    min-height: 35%;
+    min-height: 33%;
     height: 33%;
     width: 40%;
     background-color: #c2d6d6;
     text-align: justify;
     position: absolute;
-    top:45%; left: 7%;
+    top:47%; left: 7%;
     border: 2px solid black;
 }
 
@@ -46,7 +47,7 @@ body{
     border: 2px solid black;
 }
 h1{
-    font-size: 20;
+    font-size: 24;
     font -weight: bold;
     color: solid black;
 }
