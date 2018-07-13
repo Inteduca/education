@@ -4,45 +4,41 @@
 {{block.super}}
 {% endblock %}
 
-{% block barradown %}
-{{block.super}}
-{% endblock %}
-
 {% block content %}
 {% load static %}
 <link rel="stylesheet" type="text/css" href = "{% static 'identificacion/register.css' %}" />
 
-<div id="bienvenido">
-    Bienvenido/a
+<div id="hi">
+    Regístrate.
 </div>
 
 <form method="post">
     {% csrf_token %}
     <div id="registrar">
-    <p>
-        <h1>¿Todavía no estás registrado?</h1> <br>
-    Nombre:  <label for="name"></label>
-        <input id="name" type="text" name="name"> <br>
-    Contraseña:  <label for="password"></label>
-    <input id="password" type="password" name="password"> <br>
-    Email:  <label for="email"></label>
-    <input id="email" type="text" name="email"> <br>
-    <button type="submit" value="register" name="register">OK</button> <br>
-        <span style="font-size: 12;"> Recomendamos que utilices un nombre con letras y números. </span>
+    <ul id="lista">
+        <li style="list-style-type: none;"><label for="name"></label>
+            <input id="name" type="text" name="name" placeholder="Nombre de usuario"> </li>
+        <li style="list-style-type: none;"><label for="email"></label>
+            <input id="email" type="text" name="email" placeholder="Email"> </li>
+        <li style="list-style-type: none;"><label for="password"></label>
+            <input id="password" type="password" name="password" placeholder="Contraseña"> </li>
+        <li style="list-style-type: none;"><label for="password2"></label>
+            <input id="password2" type="password" name="password2" placeholder="Contraseña"> </li>
+    </ul>
+    <p id="radii">¿Qué asignaturas quieres practicar? <br>
+        <input type="checkbox" id="matematicas" value="Matemáticas"> Matemáticas<br>
+        <input type="checkbox" id="fisica" value="Física"> Física<br>
+        <input type="checkbox" id="quimica" value="Química"> Química
     </p>
+    <button id="boton" type="submit">Registrarme</button>
     </div>
-</form>
-
-<form method="post">
-    {% csrf_token %}
-    <div id="login">
-            <h1>¿Ya estás registrado? </h1> <br>
-        Nombre:  <label for="name1"></label>
-        <input id="name1" type="text" name="name1"> <br>
-        Contraseña:  <label for="password1"></label>
-        <input id="password1" type="password" name="password1"> <br>
-        <button type="submit" value="login" name="login">OK</button> <br>
-        <span style="font-size: 12;"> Si salta un error, vuelve atrás y revisa si la contraseña es correcta. </span>
+    <div id="explicacion">
+        <h1>Pasos del registro:</h1>
+        <ul id="pasos">
+            <li style="list-style-type: none;"> <span style="font-weight:bold">1.</span> Rellenar el formulario a la derecha.</li>
+            <li style="list-style-type: none;"> <span style="font-weight:bold">2.</span> Esperar a que contactemos contigo por correo para asignarte un profesor particular. Esta espera será cuestión de, como mucho,
+            horas: en muy poco tiempo tendrás un profesor a tu disposición.</li>
+        </ul>
     </div>
 </form>
 

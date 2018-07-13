@@ -1,0 +1,30 @@
+{% extends "education/base.html" %}
+
+{% block barraup %}
+{{block.super}}
+{% endblock %}
+
+{% block content %}
+{% load static %}
+<head>
+<link rel="stylesheet" type="text/css" href = "{% static 'identificacion/login.css' %}" />
+</head>
+<div id="hi">
+    <p>Identifícate.</p>
+</div>
+
+<form method="post" class="webform">
+    {% csrf_token %}
+    <div id="login">
+        <label class="labely" for="name"></label>
+        <input id="name" type="text" name="name" placeholder="Nombre de usuario"> <br>
+        <label class="labely" for="password"></label>
+        <input id="password" type="password" name="password" placeholder="Contraseña"> <br>
+        <button type="submit" value="login" class="boton">Entrar</button> <br>
+        <p>¿Todavía no tienes cuenta? <a href="registrar">Regístrate</a>.
+            <br><br>¿Te has olvidado de tu contraseña? <br> <a href="/principal/contacta">Contacta</a> con nosotros.</p>
+    </div>
+
+</form>
+<img src="{% static 'identificacion/images/loginimage.jpg' %}"/>
+{% endblock %}

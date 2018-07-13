@@ -4,46 +4,62 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
 from usuario.models import Comentarios
+from usuario.models import Asignaturas
 from django.db import IntegrityError
 
-def register(request):
+def login(request):
     if request.method=='POST':
-        if request.POST.get("register"):
-            username=request.POST.get('name')
-            password=request.POST.get('password')
-            email=request.POST.get('email')
-            try:
-                user=User.objects.create_user(username=username, password=password, email=email)
-            except:
-                raise Http404("Prueba con otro nombre de usuario, parece que ese ya está elegido. Si sigue sin funcionar tras haber probado con otros nombres, contacta con nosotros por correo (inted00@gmail.com).")
-            #es necesario meter asi los users en la db si quieres que luego funcionen con los auth etc
-            try: #salvar al user
-                user.save()
-            except:
-                raise Http404("Vaya, parece que ha ocurrido un error. Prueba con otro nombre de usuario, o contacta con nosotros.")
-            try: #hacer un comentarios
-                d=Comentarios(username=username)
-                d.save()
-            except:
-                raise Http404("Vaya, parece que ha ocurrido un error, y ¡es nuestra culpa! Por favor, háznoslo saber contactando con nosotros por correo o móvil")
-            try:
-                user = authenticate(request, username=username, password= password)
-                if user is not None:
-                    login(request, user)
-                    return HttpResponseRedirect('/usuario/')
-                else:
-                    raise Http404("Vaya, parece que ha ocurrido un error, y ¡es nuestra culpa! Por favor, háznoslo saber contactando con nosotros por correo o móvil")
-            except:
-                raise Http404("Vaya, parece que ha ocurrido un error, y ¡es nuestra culpa! Por favor, háznoslo saber contactando con nosotros por correo o móvil")
-
-        if request.POST.get("login"):
-            user1 = request.POST.get("name1")
-            password1 = request.POST.get("password1")
-            user = authenticate(request, username=user1, password= password1)
+        username=request.POST.get('name')
+        password=request.POST.get('password')
+        try:
+            user=authenticate(request, username=username, password=password)
             if user is not None:
                 login(request, user)
-                return HttpResponseRedirect('/usuario/')
+                return HttpResponseRedirect('/usuario')
             else:
-                raise Http404("¡Vaya! Parece que la contraseña es incorrecta. Asegúrate de escribirla bien y, si lo necesitas, contacta con nosotros por correo o móvil")
-    return render(request, 'register.html')
+                raise Http404("ERROR interno")
+        except:
+            raise Http404("ERROR contraseña o usuario")
 
+    return render(request, 'login.html')
+
+def registrar(request):
+    if request.method=='POST':
+        username=request.POST.get('name')
+        password=request.POST.get('password')
+        email=request.POST.get('email')
+        try:
+            user=User.objects.create_user(username=username, password=password, email=email)
+        except:
+            raise Http404("Nombre cogido")
+        try:
+            user.save()
+        except:
+            raise Http404("Error interno")
+        try:
+            d=Comentarios(username=username)
+            d.save()
+        except:
+            raise Http404("error comentarios")
+        try:
+            m=Asignaturas(username=username)
+            if request.POST["matematicas"]:
+                m.matematicas="t"
+            if request.POST["fisica"]:
+                m.fisica="t"
+            if request.POST["quimica"]:
+                m.quimica="t"
+            m.save()
+        except:
+            raise Http404("error asignaturas")
+        try:
+            user=authenticate(request, username=username, password=password)
+            if user is not None:
+                login(request, user)
+                return HttpResponseRedirect('/usuario')
+            else:
+                raise Http404("ERROR interno")
+        except:
+            raise Http404("ERROR interno")
+
+    return render(request, 'register.html')

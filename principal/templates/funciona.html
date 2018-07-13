@@ -1,0 +1,45 @@
+{% extends "education/base.html" %}
+{% block barraup %}
+{{block.super}}
+{%endblock%}
+
+
+{%block content%}
+{% load static %}
+<link rel="stylesheet" type="text/css" href = "{% static 'principal/funciona.css' %}" />
+<div id="apoyo"></div>
+<div id="entrada">
+    <p id="texto"> Contacto online constante, sin citas, con un tutor que facilitará recursos educativos, responderá preguntas y elaborará
+    ejercicios adaptados al nivel del alumno para corregirlos y personalizar su forma de enseñanza, adecuándola a las fortalezas y debilidades del estudiante.</p>
+    </div>
+<div id="precio">
+    <p>Nuestros servicios son totalmente <span style="font-weight: bold">gratuitos</span>. A cambio de nuestros servicios, solo pedimos una cosa:
+    que nuestros alumnos y padres compartan sus opiniones sobre la calidad del servicio y formas de mejorarlo respondiendo a las preguntas que mandaremos por correo.
+    De esta forma conseguimos que, con un mínimo esfuerzo, vosotros también participéis en el desarrollo de IntEd o, dicho de otra forma, en sus objetivos: alcanzar una mayor igualdad de oportunidades y una mejor
+    enseñanza.</p>
+</div>
+<div id="asignaturas">
+    <p>En IntEd ayudamos con las asignaturas de <span style="font-weight:bold">matemáticas, física y/o química nivel ESO</span>. El alumno puede practicar
+    una, dos, o las tres asignaturas con nosotros.</p>
+</div>
+<div id="tutorprofundidad">
+    <h1 style="font-size: 24">El tutor en profundidad.</h1>
+    El tutor realizará una función de guía académico, identificando las fortalezas y debilidades del alumno y ajustando su enseñanza a ellas. Más específicamente,
+    las funciones del tutor son:
+    <ul>
+        <li>Llevar un <span style="font-weight: bold">horario</span> en el que escribirá los recursos y ejercicios para que el alumno los estudie y realice, junto con
+            fechas recomendadas para llevar las tareas a cabo. Tanto el alumno como los padres pueden influir en la asignación de tareas y fechas.</li>
+        <li>Llevar un <span style="font-weight: bold">seguimiento</span> del progreso del alumno: los resultados de los ejercicios, comparaciones con resultados previos,
+            si se ha realizado la tarea...</li>
+        <li>Responder las <span style="font-weight: bold">preguntas</span> del alumno.</li>
+        <li><span style="font-weight:bold">Corregir</span> los ejercicios realizados por el alumno, explicar la solución correcta e indicar qué recursos debería revisar el alumno para no volver a caer en el mismo error. </li></ul>
+        La comunicación entre el tutor y el alumno se realizará <span style="font-weight:bold">por WhatsApp o por correo</span>. <br> El alumno puede preguntar al tutor en cualquier momento, y el tutor le responderá
+        en poco tiempo. Animamos tanto a padres como a alumnos a contactar con nosotros para comentar sugerencias y dudas. <br>
+        Además, en esta página WEB, en la pestaña <span style="font-weight:bold">"tu cuenta"</span>, podrás acceder a la página principal del usuario, donde se actualizarán el horario y el seguimiento. <br><br>
+</p>
+</div>
+<div id="inv">
+    <p>¿Quieres probar nuestros servicios? <a href="">Regístrate</a>. <br> <br></p>
+
+</div>
+{%endblock%}

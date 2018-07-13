@@ -1,0 +1,18 @@
+{% extends "education/base.html" %}
+{% block barraup %}
+{{block.super}}
+{%endblock%}
+
+
+{%block content%}
+{% load static %}
+<link rel="stylesheet" type="text/css" href = "{% static 'principal/contacta.css' %}" />
+<div id="duda">
+    <p><br>Le invitamos a contactar con nosotros para resolver cualquier duda o comentar cualquier sugerencia.</p>
+</div>
+<div id="datos">
+    <p>Organizador: Jorge Herranz Ayuso. <br>
+    Dirección de correo: inted00@gmail.com</p>
+</div>
+
+{%endblock%}

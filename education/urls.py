@@ -5,6 +5,7 @@ from django.views.generic.edit import CreateView
 
 urlpatterns = [
     path('', include('principal.urls')),
+    path('inicio/', include('principal.urls')),
     path('identificacion/', include('identificacion.urls')),
     path('usuario/', include('usuario.urls')),
     path('admin/', admin.site.urls),

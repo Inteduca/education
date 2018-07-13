@@ -5,24 +5,31 @@
 
 {%block content%}
 {% load static %}
-
 <link rel="stylesheet" type="text/css" href = "{% static 'usuario/inicio.css' %}" />
+
+
+<form method="get">
+    {% csrf_token %}
+
     <div id="nombre_usuario">
         <p> Hola {{ username }}:</p>
     </div>
-    <div class="tarea" id="scores">
-        <h1>Seguimiento:</h1>
-        <p>{{ score_text }}</p>
+    <div id="opciones">
+        <a href="#horario" style="color: rgb(0,0,0); text-decoration:underline"> Horario</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#seguimiento" style="color: rgb(0,0,0); text-decoration:underline"> Seguimiento</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#observaciones" style="color: rgb(0,0,0); text-decoration:underline"> Observaciones</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </div>
-    <div class="tarea" id="horario">
-        <h1>Horario:</h1>
-        <p>{{ horario_text }}</p>
-    </div>
-    <div id="recuerda">
-        <br>
-        Recuerda que siempre estaremos atentos al correo y al móvil: ¡Contacta con tu tutor si tienes alguna duda!<br>
-        Nuestro correo es inted00@gmail.com, también podemos hablar por WhatsApp. <br>
+    <div id="texto">
+        <h1 id="horario">Horario</h1>
+        <p>{{horario_text}}</p>
 
+        <h1 id="seguimiento">Seguimiento</h1>
+        <p>{{score_text}}</p>
+
+        <h1 id="observaciones">Observaciones</h1>
+        <p>{{observaciones_text}}</p>
     </div>
+
+</form>
 
 {%endblock%}

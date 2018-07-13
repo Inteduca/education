@@ -3,37 +3,32 @@
 {{block.super}}
 {%endblock%}
 
+
 {%block content%}
 {% load static %}
+
 <link rel="stylesheet" type="text/css" href = "{% static 'principal/hola.css' %}" />
+<div id="apoyo"></div>
 <div id="presentacion">
-    <h1>¿Qué es IntEd?</h1>
-    <p>IntEd es la nueva forma de enseñanza. Al alumno se le asignará un tutor que guiará su aprendizaje en las asignaturas de matemáticas, física y química de cualquier curso de la ESO. En IntEd apostamos por una enseñanza independiente pero guiada,
-        en la que el alumno desarrolle su autonomía mientras invierte su tiempo de la mejor manera posible, gracias a la supervisión del tutor. </p>
+    <p id="apu"> IntEd es la nueva forma de enseñanza particular. Facilitamos tutores que se dirigen
+    a cada alumno personalmente, para que reciban un apoyo educativo adaptado a sus necesidades.</p>
     </div>
-<div id="funciones">
-    <h1>El tutor</h1> Toda función del tutor está destinada a marcar el camino que más ayude al alumno. Tratará continuamente de conocer sus necesidades
-    para facilitar los ejercicios y recursos que más las satisfagan. Las funciones del tutor son: <ul>
-        <li>Elaborar un horario con recursos recomendados y ejercicios relacionados.</li>
-        <li>Llevar un seguimiento de los progresos del alumno.</li>
-        <li>(Tanto el horario como el seguimiento se pueden consultar en esta página). </li>
-        <li>Responder a preguntas personales de cada alumno.</li>
-        <li>Corregir los errores y escribir un informe sobre las debilidades y fortalezas que haya mostrado el alumno en su realización, además de ajustar la enseñanza
-    respecto a los resultados de ese diagnóstico. </li></ul>
-        La comunicación entre el tutor y el alumno se realizará por WhatsApp o por correo, y desde IntEd animamos al alumno a sentirse libre de consultar cualquier
-        duda, realizar sugerencias o aportar información útil para su aprendizaje, si cree que está aprendiendo rápido, si se le atasca algún tema... <br>
-        El tutor revisará el progreso del alumno y actualizará el horario y el seguimiento de forma flexible, adaptándose a la rapidez del alumno. El tiempo entre revisiones, no obstante, no pasará
-        de 2 días, y se responderá a las cuestiones del alumno a medida que las pregunte.
+<div id="objetivos">
+    <p> <span style="font-size: 28">IntEd</span> cumple una labor humanitaria, cuyos objetivos son favorecer la igualdad de oportunidades en los jóvenes de la sociedad española y ayudar a aquellos alumnos que,
+        ya sea por curiosidad o por necesidad, buscan una persona con experiencia que les guíe constantemente en su vida académica y no pueden permitírselo, dados los precios
+        tan altos del mercado de tutores. En IntEd hemos escogido las características fundamentales que un servicio debe tener para satisfacer los objetivos citados y hemos desechado
+        todas las demás, de manera que el coste de un profesor particular corriente es mucho mayor que el de un tutor de IntEd: nuestros servicios son <span style="font-weight: bold">gratuitos</span>.</p>
 </div>
-<div id="precio"> <h1>Precio</h1>
-    <p> En IntEd comprendemos la incertidumbre de nuestros clientes a la hora de pagar por nuestros servicios. Por ello, ofrecemos una semana de prueba en la que
-        no se hablará de pagos. Esta semana es una oportunidad para conocer la actividad del tutor y decidir entre renovarse o terminar el contacto sin ninguna responsabilidad.
-        Uno de los objetivos de IntEd es abaratar el mercado de la enseñanza, y, por tanto, nuestros servicios solo cuestan 10 euros al mes por una asignatura, 13 euros por dos
-        y 15 euros por tres. <br> La semana de prueba entra en el primer pago. <br> Si invitas a 3 personas, se te regalará un mes gratis independientemente del número de asignaturas.</p>
+<div id="dirigido">
+    <h1>¿A quién va dirigido IntEd?</h1>
+    <p>Este servicio va dirigido a todo alumno que quiera reforzar sus conocimientos en las asignaturas de <span style="font-weight:bold">matemáticas, física y/o química
+        de la Educación Secundaria Obligatoria</span>. Todo padre o alumno que quiera participar está invitado a registrarse, independientemente de su renta.</p>
 </div>
 
-<div id="ident">
-    <h1>¿Quieres probar?</h1>
-    <p>Contacta con nosotros mandando un mensaje a inted00@gmail.com e <a href="/identificacion" style="color: black">identifícate.</a></p>
+<div id="inv">
+    <p>¿Quieres saber cómo funciona IntEd? Descúbrelo <a href="/inicio/como_funciona">aquí </a> o <a href="/inicio/contacta">contacta con nosotros</a>. <br>
+        ¿Quieres probar nuestros servicios? <a href="">Regístrate</a>. <br> <br></p>
+
 </div>
+
 {%endblock%}
