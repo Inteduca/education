@@ -1,0 +1,60 @@
+#hi{
+    position: absolute;
+    top: 20%; left: 50%;
+    font-size: 40;
+    color: solid black;
+}
+#login{
+    width: 24%;
+    min-height: 50%;
+    margin: auto;
+    border: 2px rgb(179, 179, 179);
+    position: absolute;
+    left: 50%; top: 35%;
+    text-align: justify;
+    padding: 15px;
+    background-color: rgb(217, 217, 217);
+
+}
+input[type=text]{
+    color: rgb(0,0,0);
+    width: 90%;
+    min-height:12%;
+    font-size: 20;
+    position: absolute;
+    text-align: center;
+    left: 5%;
+    border: 2px rgb(179,179,179);
+}
+input[type=password]{
+    color: rgb(0,0,0);
+    width: 90%;
+    min-height:12%;
+    font-size: 20;
+    position: absolute;
+    text-align: center;
+    left: 5%;
+    top: 21%;
+    border: 2px rgb(179,179,179);
+}
+.boton {
+    position: absolute;
+    top: 37%;
+    min-width: 90%;
+    height: 8%; min-height: 10%;
+    font-size: 18;
+    left: 5%;
+}
+#login p{
+    position: absolute;
+    top: 50%;
+    font-size: 19;
+}
+img{
+    display: block;
+    position: absolute;
+    top: 35%;
+    left:20%;
+    min-height: 50%;
+    width: 25%;
+}

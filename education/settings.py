@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = 'sx_l!u9ht902#72%8u*b#3_hm0yavpz1&^xs-9ob&u80nrhc)!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -79,11 +79,10 @@ WSGI_APPLICATION = 'education.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
+#DATABASE_URL= 'postgres://cuoehqdwvgkynb:784f1d816a8140b22f55e6b17387dfb716b337d7ae5074e6b76f21e16e453f0b@ec2-54-235-253-198.compute-1.amazonaws.com:5432/daqo6fgbtqmfuv'
+#conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
-DATABASE_URL= os.environ['DATABASE_URL']
-conn = psycopg2.connect(DATABASE_URL, sslmode='require')
-
-DATABASES = {'default': dj_database_url.config(default=DATABASE_URL)}
+#DATABASES = {'default': dj_database_url.config(default=DATABASE_URL)}
 
 
 # Password validation

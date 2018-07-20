@@ -1,0 +1,73 @@
+#hi{
+    position: absolute;
+    top: 23%; left: 50%;
+    font-size: 40;
+    color: solid black;
+}
+#registrar{
+    width: 24%;
+    min-height: 50%;
+    margin: auto;
+    border: 2px rgb(179, 179, 179);
+    position: absolute;
+    left: 50%; top: 35%;
+    text-align: justify;
+    padding: 15px;
+    background-color: rgb(217, 217, 217);
+}
+input[type=text]{
+    color: rgb(0,0,0);
+    width: 90%;
+    min-height:20%;
+    font-size: 20;
+    text-align: center;
+    border: 2px rgb(179,179,179);
+}
+input[type=password]{
+    color: rgb(0,0,0);
+    width: 90%;
+    min-height:20%;
+    font-size: 20;
+    text-align: center;
+    border: 2px rgb(179,179,179);
+}
+li{
+    margin-bottom: 15px;
+}
+#lista{
+    position: absolute;
+    top: 2%;
+    left: 3.8%;
+    width: 80%;
+    height: 40%;
+}
+#radii{
+    position: absolute;
+    top: 47%; left: 12%;
+    font-size: 20;
+}
+#boton{
+    position: absolute;
+    top: 82%;
+    left: 10%;
+    width: 80%;
+    min-height: 12%;
+    font-size: 18;
+}
+#explicacion{
+    width: 24%;
+    min-height: 50%;
+    margin: auto;
+    border: 2px rgb(179, 179, 179);
+    position: absolute;
+    left: 22%; top: 35%;
+    text-align: justify;
+    padding: 15px;
+    background-color: rgb(217, 217, 217);
+    font-size: 20;
+}
+#explicacion h1{
+    font-size: 30;
+    font-weight: normal;
+    position: relative; left: 10px; top: -5px;
+}
